@@ -12,13 +12,13 @@
   <property name="pi" value="3.14159265" />
 
   <!-- Inertia parameters -->
-  <property name="base_mass" value="4.0" />  <!-- This mass might be incorrect -->
-  <property name="shoulder_mass" value="7.778" />
-  <property name="upper_arm_mass" value="12.93" />
-  <property name="forearm_mass" value="3.87" />
-  <property name="wrist_1_mass" value="1.96" />
-  <property name="wrist_2_mass" value="1.96" />
-  <property name="wrist_3_mass" value="0.202" />
+  <property name="base_mass" value="0.4" />  <!-- This mass might be incorrect -->
+  <property name="shoulder_mass" value="0.7778" />
+  <property name="upper_arm_mass" value="0.1293" />
+  <property name="forearm_mass" value="0.387" />
+  <property name="wrist_1_mass" value="0.196" />
+  <property name="wrist_2_mass" value="0.196" />
+  <property name="wrist_3_mass" value="0.0202" />
 
   <!-- These parameters are borrowed from the urcontrol.conf file
        but are not verified for the correct permutation.
