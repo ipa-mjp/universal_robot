@@ -69,7 +69,7 @@
 		 shoulder_3_joint_lower_limit:=${-pi}    shoulder_3_joint_upper_limit:=${0.2}
 		 wrist_1_lower_limit:=${-2*pi}    wrist_1_upper_limit:=${-0.5}
 		 wrist_2_lower_limit:=${-pi}    wrist_2_upper_limit:=${pi}
-		 wrist_3_lower_limit:=${0.5}    wrist_3_upper_limit:=${1.5*pi}">
+		 wrist_3_lower_limit:=${0.5-pi}    wrist_3_upper_limit:=${0.5*pi}">
 
     <link name="${prefix}base_link" >
       <visual>
