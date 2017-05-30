@@ -10,8 +10,8 @@
 
   <!-- arm -->
   <xacro:ur10_robot prefix="" joint_limited="true"
-		 shoulder_1_lower_limit="${-pi}" shoulder_1_upper_limit="${pi}"
-		 shoulder_2_lower_limit="${-pi}" shoulder_2_upper_limit="${pi}"
+		 shoulder_1_joint_lower_limit="${-pi}" shoulder_1_joint_upper_limit="${pi}"
+		 shoulder_2_joint_lower_limit="${-pi}" shoulder_2_joint_upper_limit="${pi}"
 		 shoulder_3_joint_lower_limit="${-pi}" shoulder_3_joint_upper_limit="${pi}"
 		 wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
 		 wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
