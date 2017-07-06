@@ -2,7 +2,21 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="ur_arm_gazebo" params="prefix">
-    <!-- nothing to do here at the moment -->
+    <!--gazebo reference="${prefix}ee_link">
+      <self_collide>false</self_collide>
+      <sensor name='${prefix}ee_link_sensor' type='contact'>
+        <always_on>true</always_on>
+        <update_rate>100.0</update_rate>
+        <contact>
+          <collision>${prefix}ee_link_collision</collision>
+          <topic>${prefix}ee_link_bumper</topic>
+        </contact>
+        <plugin name="${prefix}ee_link_gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
+          <bodyName>${prefix}ee_link</bodyName>
+          <bumperTopicName>${prefix}ee_link_bumper</bumperTopicName>
+        </plugin>
+      </sensor>
+    </gazebo-->
   </xacro:macro>
 
 </robot>
