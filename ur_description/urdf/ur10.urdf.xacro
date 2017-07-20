@@ -64,7 +64,7 @@
 
 
   <xacro:macro name="ur10_robot" params="prefix joint_limited
-		 shoulder_1_joint_lower_limit:=${-0.5*pi}    shoulder_1_joint_upper_limit:=${0.5}
+		 shoulder_1_joint_lower_limit:=${-pi}    shoulder_1_joint_upper_limit:=${0.5}
 		 shoulder_2_joint_lower_limit:=${-pi}    shoulder_2_joint_upper_limit:=${pi}
 		 shoulder_3_joint_lower_limit:=${-pi}    shoulder_3_joint_upper_limit:=${0.2}
 		 wrist_1_lower_limit:=${-2*pi}    wrist_1_upper_limit:=${-0.5}
