@@ -13,12 +13,12 @@
 
   <!-- Inertia parameters -->
   <xacro:property name="base_mass" value="4.0" />  <!-- This mass might be incorrect -->
-  <xacro:property name="shoulder_mass" value="7.778" />
-  <xacro:property name="upper_arm_mass" value="12.93" />
-  <xacro:property name="forearm_mass" value="3.87" />
-  <xacro:property name="wrist_1_mass" value="1.96" />
-  <xacro:property name="wrist_2_mass" value="1.96" />
-  <xacro:property name="wrist_3_mass" value="0.202" />
+  <xacro:property name="shoulder_mass" value="1" />
+  <xacro:property name="upper_arm_mass" value="1" />
+  <xacro:property name="forearm_mass" value="1" />
+  <xacro:property name="wrist_1_mass" value="0.5" />
+  <xacro:property name="wrist_2_mass" value="0.5" />
+  <xacro:property name="wrist_3_mass" value="0.5" />
 
   <!-- These parameters are borrowed from the urcontrol.conf file
        but are not verified for the correct permutation.
@@ -329,7 +329,7 @@
     </link>
     
     <joint name="${prefix}wrist_3_link-tool0_fixed_joint" type="fixed">
-      <origin xyz="0.0 0.2922 0.0" rpy="0.0 0.0 ${pi/2.0}" />
+      <origin xyz="0.0 ${wrist_3_length+0.14} 0.0" rpy="0.0 0.0 ${pi/2.0}" />
       <parent link="${prefix}wrist_3_link"/>
       <child link="${prefix}tool0"/>
       <xacro:unless value="${joint_limited}">
