@@ -19,6 +19,9 @@ arm_controller:
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
   action_monitor_rate: 10
+  required_drive_mode: 7
+
+## position controller
 joint_group_position_controller:
   type: position_controllers/JointGroupPositionController
   joints:
@@ -28,4 +31,67 @@ joint_group_position_controller:
      - joint_4
      - joint_5
      - joint_6
+  required_drive_mode: 1
 
+joint_1_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_1
+  required_drive_mode: 1
+joint_2_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_2
+  required_drive_mode: 1
+joint_3_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_3
+  required_drive_mode: 1
+joint_4_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_4
+  required_drive_mode: 1
+joint_5_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_5
+  required_drive_mode: 1
+joint_6_position_controller:
+  type: position_controllers/JointPositionController
+  joint: joint_6
+  required_drive_mode: 1
+
+
+## velocity controller
+joint_group_velocity_controller:
+  type: velocity_controllers/JointGroupVelocityController
+  joints:
+     - joint_1
+     - joint_2
+     - joint_3
+     - joint_4
+     - joint_5
+     - joint_6
+  required_drive_mode: 2
+
+joint_1_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_1
+  required_drive_mode: 2
+joint_2_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_2
+  required_drive_mode: 2
+joint_3_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_3
+  required_drive_mode: 2
+joint_4_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_4
+  required_drive_mode: 2
+joint_5_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_5
+  required_drive_mode: 2
+joint_6_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: joint_6
+  required_drive_mode: 2
