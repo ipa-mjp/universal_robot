@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur10" >
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+  <!-- ur10 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur10VelControl.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:ur10VelControl_robot prefix="" joint_limited="false"/>
+
+  <link name="world" />
+
+  <joint name="world-robot_base_joint" type="fixed">
+    <origin xyz="-0.50 -0.30 0.30" rpy="0 0 0" />
+    <parent link="world"/>
+    <child link="robot_base"/>
+  </joint>
+
+  <link name="robot_base">
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <box size="1.0 0.60 0.60"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+  </link>
+
+  <joint name="world_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link = "base_link" />
+    <origin xyz="0.324 -0.191 0.2925" rpy="0.0 0.0 -2.3562" />
+  </joint>
+
+</robot>
