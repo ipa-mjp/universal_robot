@@ -11,10 +11,10 @@ if __name__ == "__main__":
 	rospy.sleep(1.0)
 
 	pub_data = Float64MultiArray()
-	for i in range(0, 10):
-		pub_data.data = [-1.0,-1.0,-1.0,-1.0,-1.0,-1.0]
+        for i in range(0, 10):
+                pub_data.data = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0] #[-1.0,-1.0,-1.0,-1.0,-1.0,-1.0]
 		pub.publish(pub_data)
-		rospy.sleep(0.05)
+                rospy.sleep(0.05)
 	for i in range(0, 10):
 		pub_data.data = [0.0,0.0,0.0,0.0,0.0,0.0]
 		pub.publish(pub_data)
