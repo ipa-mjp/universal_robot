@@ -30,12 +30,12 @@
 
  <joint name="world_joint" type="fixed">
    <parent link="robot_base" />
-   <child link = "base_link" />
+   <child link = "arm_base_link" />
    <origin xyz="0.324 -0.191 0.2925" rpy="0.0 0.0 -2.3562" />
  </joint>
 
   <!-- arm -->
-  <xacro:ur10_robot prefix="" joint_limited="true"
+  <xacro:ur10_robot prefix="arm_" joint_limited="true"
                shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
                shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
                elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
@@ -47,7 +47,7 @@
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="ros_control" filename="libhwi_switch_gazebo_ros_control.so">
-      <robotNamespace></robotNamespace>
+      <robotNamespace>arm</robotNamespace>
       <filterJointsParam>joint_names</filterJointsParam>
     </plugin>
   </gazebo>
