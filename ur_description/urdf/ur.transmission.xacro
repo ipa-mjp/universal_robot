@@ -58,13 +58,13 @@
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}wrist_elbow_trans">
+    <transmission name="${prefix}wrist_3_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}wrist_elbow_joint">
+      <joint name="${prefix}wrist_3_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}wrist_elbow_motor">
+      <actuator name="${prefix}wrist_3_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
