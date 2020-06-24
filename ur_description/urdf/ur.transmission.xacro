@@ -3,68 +3,68 @@
 
   <xacro:macro name="ur_arm_transmission" params="prefix">
 
-    <transmission name="${prefix}1_trans">
+    <transmission name="${prefix}shoulder_1_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}1_joint">
+      <joint name="${prefix}shoulder_1_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}1_motor">
+      <actuator name="${prefix}shoulder_1_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}2_trans">
+    <transmission name="${prefix}shoulder_2_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}2_joint">
+      <joint name="${prefix}shoulder_2_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}2_motor">
+      <actuator name="${prefix}shoulder_2_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}3_trans">
+    <transmission name="${prefix}shoulder_3_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}3_joint">
+      <joint name="${prefix}shoulder_3_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}3_motor">
+      <actuator name="${prefix}shoulder_3_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}4_trans">
+    <transmission name="${prefix}wrist_1_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}4_joint">
+      <joint name="${prefix}wrist_1_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}4_motor">
+      <actuator name="${prefix}wrist_1_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}5_trans">
+    <transmission name="${prefix}wrist_2_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}5_joint">
+      <joint name="${prefix}wrist_2_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}5_motor">
+      <actuator name="${prefix}wrist_2_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
   
-    <transmission name="${prefix}6_trans">
+    <transmission name="${prefix}wrist_3_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}6_joint">
+      <joint name="${prefix}wrist_3_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}6_motor">
+      <actuator name="${prefix}wrist_3_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>

@@ -90,7 +90,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}1_joint" type="revolute">
+    <joint name="${prefix}shoulder_1_joint" type="revolute">
       <parent link="${prefix}base_link" />
       <child link = "${prefix}shoulder_pan_link" />
       <origin xyz="0.0 0.0 ${shoulder_height}" rpy="0.0 0.0 0.0" />
@@ -123,7 +123,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}2_joint" type="revolute">
+    <joint name="${prefix}shoulder_2_joint" type="revolute">
       <parent link="${prefix}shoulder_pan_link" />
       <child link = "${prefix}shoulder_lift_link" />
       <origin xyz="0.0 ${shoulder_offset} 0.0" rpy="0.0 ${pi / 2.0} 0.0" />
@@ -156,7 +156,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}3_joint" type="revolute">
+    <joint name="${prefix}shoulder_3_joint" type="revolute">
       <parent link="${prefix}shoulder_lift_link" />
       <child link = "${prefix}elbow_link" />
       <origin xyz="0.0 ${elbow_offset} ${upper_arm_length}" rpy="0.0 0.0 0.0" />
@@ -189,7 +189,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}4_joint" type="revolute">
+    <joint name="${prefix}wrist_1_joint" type="revolute">
       <parent link="${prefix}elbow_link" />
       <child link = "${prefix}wrist_1_link" />
       <origin xyz="0.0 0.0 ${forearm_length}" rpy="0.0 ${pi / 2.0} 0.0" />
@@ -222,7 +222,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}5_joint" type="revolute">
+    <joint name="${prefix}wrist_2_joint" type="revolute">
       <parent link="${prefix}wrist_1_link" />
       <child link = "${prefix}wrist_2_link" />
       <origin xyz="0.0 ${wrist_1_length} 0.0" rpy="0.0 0.0 0.0" />
@@ -255,7 +255,7 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}6_joint" type="revolute">
+    <joint name="${prefix}wrist_3_joint" type="revolute">
       <parent link="${prefix}wrist_2_link" />
       <child link = "${prefix}wrist_3_link" />
       <origin xyz="0.0 0.0 ${wrist_2_length}" rpy="0.0 0.0 0.0" />
