@@ -16,7 +16,7 @@
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model ur10_robot -z 0.01 " respawn="false" output="screen" />
 
   <!-- robot state publisher -->
-  <node ns="arm" pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
       <param name="publish_frequency" type="double" value="50.0" />
       <param name="tf_prefix" type="string" value="" />
       <!--remap from="joint_states" to="/arm/joint_states"/-->
@@ -24,18 +24,18 @@
 
   <!-- fake Calibration and HW-Services -->
   <node pkg="rostopic" type="rostopic" name="fake_joint_calibration" args="pub /calibrated std_msgs/Bool true" />
-  <node ns="arm" pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
+  <node pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
 
   <!-- controllers -->
   <rosparam ns="arm" command="load" file="$(find ur_gazebo)/controller/arm_controller_ur10.yaml" />
   <!--rosparam ns="arm" command="load" file="$(find schunk_lwa4p_extended)/config/joint_limits.yaml"/-->
 
   <!-- start_controllers -->
-  <node ns="arm" name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
+  <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
 
   <!-- control_mode_adapter -->
-  <node ns="arm" name="cob_control_mode_adapter_node" pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" cwd="node" respawn="false" output="screen"/>
-  <node ns="arm" name="joint_states_relay" pkg="topic_tools" type="relay" args="joint_states /joint_states" cwd="node" respawn="true" output="screen"/>
+  <node name="cob_control_mode_adapter_node" pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" cwd="node" respawn="false" output="screen"/>
+  <node name="joint_states_relay" pkg="topic_tools" type="relay" args="joint_states /joint_states" cwd="node" respawn="true" output="screen"/>
 
 
   <!-- start diagnostics -->
