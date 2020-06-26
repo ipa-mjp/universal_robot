@@ -27,7 +27,7 @@
   <node pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
 
   <!-- controllers -->
-  <rosparam ns="arm" command="load" file="$(find ur_gazebo)/controller/arm_controller_ur10.yaml" />
+  <rosparam command="load" file="$(find ur_gazebo)/controller/arm_controller_ur10.yaml" />
   <!--rosparam ns="arm" command="load" file="$(find schunk_lwa4p_extended)/config/joint_limits.yaml"/-->
 
   <!-- start_controllers -->

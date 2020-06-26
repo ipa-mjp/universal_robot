@@ -69,7 +69,7 @@
       </actuator>
     </transmission>
     
-    <transmission name="${prefix}ee_fixed_trans">
+    <!--transmission name="${prefix}ee_fixed_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}ee_fixed_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
@@ -78,7 +78,7 @@
       <actuator name="${prefix}ee_fixed_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-    </transmission>
+    </transmission-->
 
   </xacro:macro>
 
