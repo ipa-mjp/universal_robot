@@ -6,8 +6,8 @@
     <transmission name="${prefix}1_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}1_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}1_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -17,8 +17,8 @@
     <transmission name="${prefix}2_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}2_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}2_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -28,8 +28,8 @@
     <transmission name="${prefix}3_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}3_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}3_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -39,8 +39,8 @@
     <transmission name="${prefix}4_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}4_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}4_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -50,8 +50,8 @@
     <transmission name="${prefix}5_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}5_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}5_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -61,8 +61,8 @@
     <transmission name="${prefix}6_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}6_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}6_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -72,8 +72,8 @@
     <transmission name="${prefix}ee_fixed_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}ee_fixed_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-        <hardwareInterface>VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}ee_fixed_motor">
         <mechanicalReduction>1</mechanicalReduction>
