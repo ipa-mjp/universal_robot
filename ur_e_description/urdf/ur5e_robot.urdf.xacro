@@ -8,8 +8,8 @@
   <!-- ur5e -->
   <xacro:include filename="$(find ur_e_description)/urdf/ur5e.urdf.xacro" />
 
-  <!-- arm -->
-  <xacro:ur5e_robot prefix="" joint_limited="false"/>
+  <!-- Schmalz gripper -->
+  <xacro:include filename="$(find ur_e_description)/urdf/gripper.urdf.xacro" />
 
   <link name="world" />
 
@@ -18,5 +18,13 @@
     <child link = "base_link" />
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
   </joint>
+
+  <!-- arm -->
+  <xacro:ur5e_robot prefix="" joint_limited="false"/>
+
+  <!-- gripper -->
+  <xacro:vacuum_gripper name="gripper" parent="ee_link">
+    <origin xyz="0.074 0.0 0.0" rpy="0.0 0.0 1.57079632679" />
+  </xacro:vacuum_gripper>
 
 </robot>
