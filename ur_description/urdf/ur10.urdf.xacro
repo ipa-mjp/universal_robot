@@ -341,6 +341,20 @@
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
 
+    <joint name="${prefix}gripper_fixed_joint" type="fixed">
+      <parent link="${prefix}ee_link" />
+      <child link = "gripper" />
+      <origin xyz=" 0.1500 0.0 0.0" rpy="3.1415 0 0"/>
+    </joint>
+    
+    <link name="gripper">
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="-0.01 0 0"/>
+      </collision>
+    </link>
 
   </xacro:macro>
 </robot>
