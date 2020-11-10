@@ -22,4 +22,12 @@
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
   </joint>
 
+  <link name="gripper" />
+
+  <joint name="gripper_joint" type="fixed">
+    <parent link="tool0" />
+    <child link = "gripper" />
+    <origin xyz="0.0 0.0 0.105" rpy="0.0 0.0 0.0" />
+  </joint>
+
 </robot>
